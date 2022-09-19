@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Senha</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+</head>
+
+<body>
+
+    <div id="titulo">
+        <h1>Jogo da Senha</h1>
+        <button id="btn-iniciar" onclick="iniciarJogo()">Iniciar</button>
+
+        <div id="jogo-senha">
+
+            <input id="n1" type="number" maxlength="1" placeholder="1" onfocus="this.select()"
+                oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength); proximoInput(this.id)" />
+            <input id="n2" type="number" maxlength="1" placeholder="2" onfocus="this.select()"
+                oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength); proximoInput(this.id)" />
+            <input id="n3" type="number" maxlength="1" placeholder="3" onfocus="this.select()"
+                oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength); proximoInput(this.id)" />
+            <input id="n4" type="number" maxlength="1" placeholder="4" onfocus="this.select()"
+                oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength); proximoInput(this.id)" />
+
+            <br>
+            <button id="btn-enviar" onclick="realizarJogada()">Enviar</button>
+
+            <div id="jogadas">
+                <p>tentativas | input | resultado</p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>
